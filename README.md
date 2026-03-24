@@ -52,20 +52,6 @@ College Match is a lightweight dating-style web app designed for college student
 
 ---
 
-## 📂 Project Structure
-college-matchmaking/
-├── index.html # Landing page
-├── auth.html # Login / signup
-├── profile.html # Profile creation/edit
-├── browse.html # Swipe interface
-├── matches.html # Matches view
-├── css/
-├── js/
-└── README.md
-
-
----
-
 ## 🔧 Setup (Quick)
 
 1. Create a Supabase project  
