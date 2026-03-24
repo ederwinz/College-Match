@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Profile — College Match</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <a href="browse.html" class="logo">College Match</a>
+    <nav class="nav">
+      <a href="browse.html">Browse</a>
+      <a href="matches.html">Matches</a>
+      <button id="logout-btn" class="btn">Log out</button>
+    </nav>
+  </header>
+
+  <main class="profile-page">
+    <div class="profile-card">
+      <h2>Your profile</h2>
+      <form id="profile-form">
+        <label>Profile photo</label>
+        <div class="photo-upload">
+          <div id="photo-preview" class="photo-preview"></div>
+          <input type="file" id="photo-input" name="photo" accept="image/jpeg,image/png,image/webp" hidden>
+          <button type="button" id="photo-btn" class="btn btn-outline">Choose photo</button>
+        </div>
+
+        <label for="display_name">Display name</label>
+        <input type="text" id="display_name" placeholder="How you want to be called">
+
+        <label for="bio">Bio</label>
+        <textarea id="bio" rows="4" placeholder="A bit about you..."></textarea>
+
+        <label for="year">Year</label>
+        <select id="year">
+          <option value="">Select</option>
+          <option value="1">Freshman</option>
+          <option value="2">Sophomore</option>
+          <option value="3">Junior</option>
+          <option value="4">Senior</option>
+          <option value="5">Grad student</option>
+        </select>
+
+        <label for="major">Major</label>
+        <input type="text" id="major" placeholder="e.g. Computer Science">
+
+        <label for="interests">Interests (comma-separated)</label>
+        <input type="text" id="interests" placeholder="hiking, coffee, indie music">
+
+        <p id="profile-message" class="auth-message"></p>
+        <button type="submit" class="btn btn-primary btn-block">Save profile</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

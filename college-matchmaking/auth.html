@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log in / Sign up — College Match</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">College Match</a>
+  </header>
+
+  <main class="auth-page">
+    <div class="auth-card">
+      <h2 id="auth-title">Sign up</h2>
+      <p class="auth-subtitle">Use your .edu email to join</p>
+
+      <form id="auth-form" class="auth-form">
+        <label for="email">Email (.edu only)</label>
+        <input type="email" id="email" name="email" placeholder="you@university.edu" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="At least 6 characters" required minlength="6">
+
+        <p id="auth-message" class="auth-message"></p>
+
+        <button type="submit" id="auth-submit" class="btn btn-primary btn-block">Sign up</button>
+      </form>
+
+      <p class="auth-toggle">
+        Already have an account? <a href="#" id="toggle-mode">Log in</a>
+      </p>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

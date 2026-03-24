@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matches — College Match</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <a href="browse.html" class="logo">College Match</a>
+    <nav class="nav">
+      <a href="profile.html">Profile</a>
+      <a href="matches.html">Matches</a>
+      <button id="logout-btn" class="btn">Log out</button>
+    </nav>
+  </header>
+
+  <main class="matches-page">
+    <h2>Your matches</h2>
+    <div id="matches-list" class="matches-list">
+      <!-- Matches will be inserted here by JS -->
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/matches.js"></script>
+</body>
+</html>

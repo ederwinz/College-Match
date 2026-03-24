@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Match — Find Your Match</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">College Match</h1>
+    <nav class="nav">
+      <a href="auth.html">Log in</a>
+      <a href="auth.html" class="btn btn-primary">Sign up</a>
+    </nav>
+  </header>
+
+  <main class="landing">
+    <section class="hero">
+      <h2>Meet college students like you</h2>
+      <p>Verified .edu connections. Real people. Real matches.</p>
+      <a href="auth.html" class="btn btn-primary btn-large">Get started — it's free</a>
+    </section>
+
+    <section class="features">
+      <div class="feature-card">
+        <h3>College verified</h3>
+        <p>Only .edu emails. Keep it real.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Swipe to match</h3>
+        <p>Browse profiles, like who you're into. Mutual like = match.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Simple & safe</h3>
+        <p>No games. Just a clean way to connect.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; College Match. For college students only.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+  <script>
+    // If user is already logged in, redirect to browse
+    (async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (user) window.location.href = 'browse.html';
+    })();
+  </script>
+</body>
+</html>
